@@ -3,65 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
+  <title>Rock, Paper, Scissors Game</title>
   <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <!-- External CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-light">
+<body>
+  <div class="container text-center my-5">
+    <h1 class="mb-4">Rock, Paper, Scissors</h1>
+    <div class="row justify-content-center align-items-center mb-4">
+      <!-- User Selection Box -->
+      <div id="userSelection" class="selection-box col-5">
+        <i class="fas fa-question-circle"></i>
+      </div>
+      <!-- App Selection Box -->
+      <div id="appSelection" class="selection-box col-5">
+        <i class="fas fa-question-circle"></i>
+      </div>
+    </div>
 
-  <div class="container text-center py-5">
-    <h1 class="display-4">Rock, Paper, Scissors</h1>
-    <p class="lead">Best of 5 rounds</p>
+    <!-- Game Buttons -->
+    <div class="row justify-content-center mb-4">
+      <button id="rock" class="btn game-btn mx-2">
+        <i class="fas fa-hand-fist"></i>
+      </button>
+      <button id="paper" class="btn game-btn mx-2">
+        <i class="fas fa-hand"></i>
+      </button>
+      <button id="scissors" class="btn game-btn mx-2">
+        <i class="fas fa-hand-scissors"></i>
+      </button>
+    </div>
+
+    <!-- Scores -->
+    <div class="row justify-content-center mb-4">
+      <div id="userScore" class="score col-5">Your Score: 0</div>
+      <div id="appScore" class="score col-5">App Score: 0</div>
+    </div>
 
     <!-- Result Message -->
-    <div class="result-message" id="resultMessage"></div>
-
-        <!-- User and App Selection Display -->
-    <div class="selection-display mt-4">
-        <div id="userSelection" class="selection-box">Your Choice</div>
-        <div id="appSelection" class="selection-box">App Choice</div>
-    </div>
-    <br>
-    <!-- Choices (Responsive Row) -->
-    <div class="d-flex justify-content-center mb-4">
-        <button class="btn btn-primary mx-2" id="rock">Rock</button>
-        <button class="btn btn-secondary mx-2" id="paper">Paper</button>
-        <button class="btn btn-success mx-2" id="scissors">Scissors</button>
-    </div>
-
-    <div class="score-board">
-        <p id="userScore">Your Score: 0</p>
-        <p id="appScore">App Score: 0</p>
-    </div>
-
-    <!-- Final Result (Winner of the Game) -->
-    <div class="final-result" id="finalResult"></div>
+    <div id="resultMessage" class="result-message"></div>
   </div>
 
-  <!-- Modal for Victory Message -->
-  <div class="modal fade" id="victoryModal" tabindex="-1" role="dialog" aria-labelledby="victoryModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+  <!-- Victory Modal -->
+  <div class="modal fade" id="victoryModal" tabindex="-1" aria-labelledby="victoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="victoryModalLabel">Game Over</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
-        <div class="modal-body" id="victoryMessage"></div>
+        <div class="modal-body">
+          <p id="victoryMessage"></p>
+        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id="playAgainButton">Play Again</button>
+          <button id="playAgainButton" type="button" class="btn btn-primary">Play Again</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS & jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,41 +1,90 @@
-/* Make the buttons equal width, height, and consistent spacing */
-.d-flex button {
-    width: 33%;       /* Each button takes up 1/3 of the row */
-    height: 100px;    /* Set a fixed height for uniformity */
-    margin: 0 10px;   /* Add space between buttons */
-  }
-  
-  .selection-display {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .selection-box {
-    width: 40%;       /* Limit width of the selection boxes */
-    height: 100px;    /* Match height to button height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #ddd;
-    font-size: 20px;
-    background-color: #f8f9fa;
-  }
-  
-  .result-message, .final-result {
-    margin-top: 20px;
-    font-size: 24px;
-  }
-  
-  .final-result {
-    font-weight: bold;
-  }
-  
-  .modal-body {
-    text-align: center;
-  }
-  
-  .modal-footer {
-    display: flex;
-    justify-content: center;
-  }    
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Selection Boxes */
+.selection-box {
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #007bff;
+  margin: 10px;
+}
+
+.selection-box i {
+  font-size: 3rem;
+}
+
+/* Game Buttons */
+.game-btn {
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.game-btn:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Scores */
+.score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Result Message */
+.result-message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Modal */
+.modal-content {
+  text-align: center;
+}
+
+.modal-body p {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#playAgainButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#playAgainButton:hover {
+  background-color: #0056b3;
+}
