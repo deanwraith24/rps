@@ -1,0 +1,41 @@
+/* Make the buttons equal width, height, and consistent spacing */
+.d-flex button {
+    width: 33%;       /* Each button takes up 1/3 of the row */
+    height: 100px;    /* Set a fixed height for uniformity */
+    margin: 0 10px;   /* Add space between buttons */
+  }
+  
+  .selection-display {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .selection-box {
+    width: 40%;       /* Limit width of the selection boxes */
+    height: 100px;    /* Match height to button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    font-size: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .result-message, .final-result {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .final-result {
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    text-align: center;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+  }    

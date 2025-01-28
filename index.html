@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- External CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <div class="container text-center py-5">
+    <h1 class="display-4">Rock, Paper, Scissors</h1>
+    <p class="lead">Best of 5 rounds</p>
+
+    <!-- Result Message -->
+    <div class="result-message" id="resultMessage"></div>
+
+        <!-- User and App Selection Display -->
+    <div class="selection-display mt-4">
+        <div id="userSelection" class="selection-box">Your Choice</div>
+        <div id="appSelection" class="selection-box">App Choice</div>
+    </div>
+    <br>
+    <!-- Choices (Responsive Row) -->
+    <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-primary mx-2" id="rock">Rock</button>
+        <button class="btn btn-secondary mx-2" id="paper">Paper</button>
+        <button class="btn btn-success mx-2" id="scissors">Scissors</button>
+    </div>
+
+    <div class="score-board">
+        <p id="userScore">Your Score: 0</p>
+        <p id="appScore">App Score: 0</p>
+    </div>
+
+    <!-- Final Result (Winner of the Game) -->
+    <div class="final-result" id="finalResult"></div>
+  </div>
+
+  <!-- Modal for Victory Message -->
+  <div class="modal fade" id="victoryModal" tabindex="-1" role="dialog" aria-labelledby="victoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="victoryModalLabel">Game Over</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="victoryMessage"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="playAgainButton">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS & jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
