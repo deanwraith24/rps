@@ -25,6 +25,12 @@ function playRound(userChoice) {
   // Show user selection with the appropriate icon
   userSelection.innerHTML = `<i class="${icons[userChoice]}"></i>`;
 
+  // Animate user selection flowing up and appearing in the display box
+  gsap.fromTo(userSelection, 
+    { y: 100, opacity: 0 }, // Initial state (below and invisible)
+    { y: 0, opacity: 1, duration: 1, ease: 'bounce.out' } // Final state (in place and visible)
+  );
+
   // Randomly select app choice
   const appChoice = choices[Math.floor(Math.random() * choices.length)];
   appSelection.innerHTML = `<i class="${icons[appChoice]}"></i>`;
@@ -97,3 +103,17 @@ playAgainButton.addEventListener('click', () => {
 document.getElementById('rock').addEventListener('click', () => playRound('rock'));
 document.getElementById('paper').addEventListener('click', () => playRound('paper'));
 document.getElementById('scissors').addEventListener('click', () => playRound('scissors'));
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+// Check for saved dark mode preference in localStorage
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark-mode');
+}
+
+// Event listener for dark mode toggle
+document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
